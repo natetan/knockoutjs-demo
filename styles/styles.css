@@ -1,0 +1,16 @@
+body {
+	background-color: #01426a;	
+}
+
+#main-content {
+	margin: auto;
+	width: 80%;
+	border-radius: 20px;
+	font-family: arial;
+	padding: 2%;
+	margin-top: 3%;
+}
+
+#main-header {
+	text-align: center;
+}
