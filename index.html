@@ -24,8 +24,18 @@
 			<div id="main-content" class="bg-success">
 				<h1 id="main-header">Testing Knockoutjs</h1>
 				<div id="content">
+					<!-- Static data -->
 					<p>First Name: <strong data-bind="text: firstName">todo</strong></p>
 					<p>Last Name: <strong data-bind="text: lastName">todo</strong></p>
+					<p>Full Name: <strong data-bind="text: fullName">todo</strong></p>
+					<p>email: <strong data-bind="text: email">todo</strong></p>
+					<p>company: <strong data-bind="text: company">todo</strong></p>
+
+					<!-- Editable data -->
+					<!-- Observables: properties that automatically will issue notifications whenever their value changes -->
+					<p>email: <input placeholder="Enter email..." data-bind="value: email"></p>
+					<p>company: <input placeholder="Enter company" data-bind="value: company"></p>
+
 				</div>
 			</div>
 		</div>
