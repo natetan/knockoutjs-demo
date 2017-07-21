@@ -25,18 +25,25 @@
 				<h1 id="main-header" class="headers">Testing Knockoutjs</h1>
 				<div id="content">
 
-					<!-- Static data -->
-					<p>First Name: <strong data-bind="text: firstName">todo</strong></p>
-					<p>Last Name: <strong data-bind="text: lastName">todo</strong></p>
-					<p>Full Name: <strong data-bind="text: fullName">todo</strong></p>
-					<p>email: <strong data-bind="text: email">todo</strong></p>
-					<p>company: <strong data-bind="text: company">todo</strong></p>
-
-					<!-- Editable data -->
-					<!-- Observables: properties that automatically will issue notifications whenever their value changes -->
-					<p>email: <input placeholder="Enter email..." data-bind="value: email"></p>
-					<p>company: <input placeholder="Enter company" data-bind="value: company"></p>
-					<button data-bind="click: capitalizeCompany">Capitalize Company</button>
+					<h2 class="headers">Your Seat Reservations</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Passenger Name</th>
+								<th>Meal</th>
+								<th>Surchage</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody data-bind="foreach: seats">
+							<tr>
+								<td><input data-bind="value: name" /></td>
+						        <td><select data-bind="options: $root.availableMeals, value: meal, optionsText: 'mealName'"></select></td>
+						        <td data-bind="text: formattedPrice"></td>
+					        </tr>
+						</tbody>
+					</table>
+					<button data-bind="click: addSeat">Reserve Another Seat</button>
 
 				</div>
 			</div>
@@ -52,7 +59,7 @@
 		<script src="node_modules/knockout/build/output/knockout-latest.js"></script>
 
 		<!-- Your own js -->
-		<script src="scripts/scripts.js"></script>
+		<script src="scripts/seats.js"></script>
 
 	</body>
 
